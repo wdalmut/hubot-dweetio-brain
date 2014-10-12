@@ -18,7 +18,7 @@ Util = require "util"
 dweetClient = require "node-dweetio"
 
 module.exports = (robot) ->
-  thing = process.env.HUBOT_THING
+  thing = process.env.HUBOT_THING || "default-thing"
   dweetio = new dweetClient()
 
   robot.brain.setAutoSave false
