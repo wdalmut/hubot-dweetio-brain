@@ -1,16 +1,16 @@
 {
-  "name": "dweet-brain",
+  "name": "dweetio-brain",
   "description": "Dweet.io brain for Hubot",
   "version": "0.0.1",
   "license": "MIT",
-  "main": "./src/scripts/dweet-brain.coffee",
+  "main": "./src/scripts/dweetio-brain.coffee",
   "devDependencies": {
     "hubot": "~2.8.2"
   },
   "dependencies": {
     "node-dweetio": "0.0.11"
   },
-  "repostitory": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/wdalmut/hubot-dweet-brain.git"
   }
