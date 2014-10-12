@@ -13,6 +13,8 @@
 # Authors:
 #   wdalmut
 
+Util = require "util"
+
 dweetClient = require "node-dweetio"
 
 module.exports = (robot) ->
@@ -23,12 +25,9 @@ module.exports = (robot) ->
 
   getData = ->
     dweetio.get_latest_dweet_for thing, (err, dweet) ->
-      dweet = dweet[0]
-      if err
-        throw err
-      else if dweet.content
+      if !err
         robot.logger.info "Data for #{thing} brain retrieved from Dweet.io"
-        robot.brain.mergeData dweet.content
+        robot.brain.mergeData dweet[0].content
       else
         robot.logger.info "Initializing new data for #{thing} brain"
         robot.brain.mergeData {}
